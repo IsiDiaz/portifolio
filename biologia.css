@@ -141,12 +141,58 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.conteudo-1 {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    min-width: 280px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo-2 {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    min-width: 280px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .conteudo:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
+.conteudo-1:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo-2:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
 .conteudo h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--verde);
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.conteudo-1 h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--verde);
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.conteudo-2 h2 {
     display: flex;
     justify-content: center;
     color: var(--verde);
@@ -161,19 +207,53 @@ h1 {
     font-size: 1.8rem;
 }
 
+.conteudo-1 p {
+    line-height: 1.6;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.conteudo-2 p {
+    line-height: 1.6;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
 .conteudo ul {
     list-style-type: none;
     font-size: 1.8rem;
 }
 
-.conteudo ul li {
+.conteudo ul {
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
+.conteudo-1 ul li {
     padding: 10px 0;
     border-bottom: 1px solid var(--azul-claro);
     transition: transform 0.5s ease;
     color: var(--preto);
 }
 
+.conteudo-2 ul {
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
 .conteudo ul li:hover {
+    transform: translateX(10px);
+    color: var(--verde);
+}
+
+.conteudo-1 ul li:hover {
+    transform: translateX(10px);
+    color: var(--verde);
+}
+
+.conteudo-2 ul li:hover {
     transform: translateX(10px);
     color: var(--verde);
 }
@@ -192,7 +272,31 @@ h1 {
     display: none;
 }
 
+.conteudo-1 ul li .block {
+    display: none;
+}
+
+.conteudo-2 ul li .block {
+    display: none;
+}
+
+
+
 .conteudo ul li:hover .block {
+    display: block;
+    text-align: justify;
+    color: var(--marinho);
+    margin-bottom: 5px;
+}
+
+.conteudo-1 ul li:hover .block {
+    display: block;
+    text-align: justify;
+    color: var(--marinho);
+    margin-bottom: 5px;
+}
+
+.conteudo-2 ul li:hover .block {
     display: block;
     text-align: justify;
     color: var(--marinho);
@@ -212,6 +316,22 @@ h1 {
 }
 
 .conteudo ul li:hover .opacidade {
+    opacity: 1;
+    max-height: 320px;
+    text-align: justify;
+    color: var(--marinho);
+    margin-bottom: 5px;
+}
+
+.conteudo-1 ul li:hover .opacidade {
+    opacity: 1;
+    max-height: 320px;
+    text-align: justify;
+    color: var(--marinho);
+    margin-bottom: 5px;
+}
+
+.conteudo-2 ul li:hover .opacidade {
     opacity: 1;
     max-height: 320px;
     text-align: justify;
