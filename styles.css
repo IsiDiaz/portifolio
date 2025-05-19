@@ -30,6 +30,7 @@ header {
     background-color: var(--marinho);
     padding: 1rem;
     justify-content: center;
+    align-items: center;
 }
 header img {
     width: 200px;
