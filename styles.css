@@ -79,6 +79,7 @@ main {
 }
 footer {
     background-color: pink;
+    font-size: larger;
     text-align: center;
 }
 
