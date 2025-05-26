@@ -199,13 +199,13 @@ h1 {
     color: var(--verde);
 }
 
-.conteudo-provas ul li .block {
+.conteudo-provas ul li .prova1 {
     display: none;
 }
 
 
 
-.conteudo-provas ul li:hover .block {
+.conteudo-provas ul li:hover .prova2 {
     display: block;
     text-align: justify;
     color: var(--marinho);
