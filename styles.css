@@ -14,11 +14,12 @@
     --branco: #FFFFFF;
     --marron-claro: #FAF1E6;
 }
-.homemade-apple-regular {
-  font-family: "Homemade Apple", cursive;
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
 
 
 body{
@@ -27,7 +28,7 @@ body{
     background-color: var(--azul-claro);
     color: var(--preto);
     font-size: 16px;
-     font-family: "Homemade Apple", cursive;
+      font-family: "Sacramento", cursive;
 }
 
 header {
