@@ -137,7 +137,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.conteudo {
+.conteudo-provas {
     background-color: var(--branco);
     border-radius: 10px;
     padding: 30px;
@@ -149,14 +149,14 @@ h1 {
 
 
 
-.conteudo:hover {
+.conteudo-provas:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 
 
-.conteudo h2 {
+.conteudo-provas h2 {
     display: flex;
     justify-content: center;
     color: var(--verde);
@@ -166,7 +166,7 @@ h1 {
 
 
 
-.conteudo p {
+.conteudo-provas p {
     line-height: 1.6;
     color: var(--preto);
     margin-bottom: 20px;
@@ -175,14 +175,14 @@ h1 {
 
 
 
-.conteudo ul {
+.conteudo-provas ul {
     list-style-type: none;
     font-size: 1.8rem;
 }
 
 
 
-.conteudo ul li:hover {
+.conteudo-provas ul li:hover {
     transform: translateX(10px);
     color: var(--verde);
 }
@@ -199,13 +199,13 @@ h1 {
     color: var(--verde);
 }
 
-.conteudo ul li .block {
+.conteudo-provas ul li .block {
     display: none;
 }
 
 
 
-.conteudo ul li:hover .block {
+.conteudo-provas ul li:hover .block {
     display: block;
     text-align: justify;
     color: var(--marinho);
@@ -225,7 +225,7 @@ h1 {
     padding: 0;
 }
 
-.conteudo ul li:hover .opacidade {
+.conteudo-provas ul li:hover .opacidade {
     opacity: 1;
     max-height: 320px;
     text-align: justify;
