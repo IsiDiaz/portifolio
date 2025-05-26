@@ -292,3 +292,69 @@ footer {
     opacity: 1;
     max-height: 500px;
 }
+
+
+
+.conteudo-atividades {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    min-width: 280px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo-atividades:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-atividades h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--verde);
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.conteudo-atividades p {
+    line-height: 1.6;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.conteudo-atividades ul {
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding-left: 0;
+}
+
+.conteudo-atividades ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.conteudo-atividades ul li:hover {
+    transform: translateX(10px);
+    color: var(--verde);
+}
+
+.conteudo-atividades ul li .opacidade {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    color: var(--marinho);
+    text-align: justify;
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.conteudo-atividades ul li:hover .opacidade {
+    opacity: 1;
+    max-height: 500px;
+}
