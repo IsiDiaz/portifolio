@@ -205,7 +205,7 @@ h1 {
 
 
 
-.conteudo-provas ul li:hover .prova2 {
+.conteudo-provas ul li:hover .prova1 {
     display: block;
     text-align: justify;
     color: var(--marinho);
