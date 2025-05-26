@@ -226,3 +226,9 @@ h1 {
     color: var(--marinho);
     margin-bottom: 5px;
 }
+
+footer {
+    background-color: pink;
+    font-size: larger;
+    text-align: center;
+}
