@@ -229,7 +229,6 @@ footer {
 }
 
 
-
 .conteudo-relatorio {
     background-color: var(--branco);
     border-radius: 10px;
@@ -241,7 +240,7 @@ footer {
 }
 
 .conteudo-relatorio:hover {
-    transform: translateY(-10px) scale(1.02); 
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -263,32 +262,33 @@ footer {
 .conteudo-relatorio ul {
     list-style-type: none;
     font-size: 1.8rem;
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 .conteudo-relatorio ul li {
     margin-bottom: 10px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .conteudo-relatorio ul li:hover {
     transform: translateX(10px);
     color: var(--verde);
+}
 
-    
-.opacidade1 {
+.conteudo-relatorio ul li .opacidade {
     display: block;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease; 
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    color: var(--marinho);
     text-align: justify;
     margin: 5px 0;
     padding: 0 10px;
 }
 
-.conteudo-relatorio ul li:hover .opacidade1 {
+.conteudo-relatorio ul li:hover .opacidade {
     opacity: 1;
-    max-height: 500px; 
+    max-height: 500px;
 }
