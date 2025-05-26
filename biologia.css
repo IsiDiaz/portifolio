@@ -275,3 +275,15 @@ footer {
 .conteudo-relatorio ul li:hover {
     transform: translateX(10px);
     color: var(--verde);
+
+    
+.opacidade1 {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease; 
+    text-align: justify;
+    margin: 5px 0;
+    padding: 0 10px;
+}
