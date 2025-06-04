@@ -1,33 +1,33 @@
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --preto: #000000;
-    --marinho: #e6b0ff;
-    --amarelo-claro:#FFF2AF;
-    --roxo-claro:#B2A5FF;
+:root {
+    --preto: #c4e3ff;
+    --marinho: #e7cbff;
+    --amarelo-claro: #FFF2AF;
+    --roxo-claro: #fff490;
     --verde: #ac4069;
     --azul-claro: #ffecf6;
     --branco: #FFFFFF;
     --marron-claro: #FAF1E6;
-}
+}   
 
 .sacramento-regular {
-  font-family: "Sacramento", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
 } 
 
 body {
     height: 100vh;
     box-sizing: border-box;
     background-color: var(--azul-claro);
-    color: var(--amarelo-claro);
+    color: var(--preto); 
     font-size: 16px;
-    font-family: "Sacramento", cursive;
+    font-family: "Sacramento", cursive; 
 }
 
 header {
@@ -39,7 +39,6 @@ header {
     justify-content: center;
 }
 
-
 .menu-disciplina {
     width: 20%;
     display: inline-block;
@@ -48,11 +47,11 @@ header {
 .botao-disciplinas {
     cursor: pointer;
     font-size: 2rem;
-    background: none;
     background-color: var(--preto);
     border: none;
     padding: 1.05rem 1.5rem;
     color: var(--roxo-claro);
+    transition: background-color 0.3s ease; 
 }
 
 #menu-toggle {
@@ -63,11 +62,12 @@ header {
     display: none;
     position: absolute;
     background-color: var(--roxo-claro);
-    box-shadow: 0 2px 5px var(--marinho);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     min-width: 190px;
     z-index: 1;
     left: 1rem;
     top: 100%;
+    border-radius: 0 0 8px 8px; 
 }
 
 .lista-vertical a {
@@ -77,18 +77,20 @@ header {
     font-size: 2rem;
     display: block;
     text-align: center;
+    transition: background-color 0.3s ease; 
 }
 
 .lista-vertical a:hover {
     background-color: var(--amarelo-claro);
 }
 
-#menu-toggle:checked~.lista-vertical {
+#menu-toggle:checked ~ .lista-vertical {
     display: block;
 }
 
-#menu-toggle:checked+.botao-disciplinas {
+#menu-toggle:checked + .botao-disciplinas {
     background-color: var(--amarelo-claro);
+    color: var(--preto);
 }
 
 .links-principais {
@@ -98,7 +100,6 @@ header {
     align-items: center;
 }
 
-
 .lista-horizontal {
     list-style: none;
     display: flex;
@@ -106,10 +107,10 @@ header {
     gap: 17rem;
 }
 
-
 .lista-horizontal a {
     text-decoration: none;
     color: var(--amarelo-claro);
+    transition: color 0.3s ease; 
 }
 
 .lista-horizontal a:hover {
@@ -119,6 +120,7 @@ header {
 main {
     margin: 40px auto;
     padding: 20px;
+    max-width: 1200px; 
 }
 
 h1 {
@@ -137,7 +139,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.conteudo {
+.conteudo-provas {
     background-color: var(--branco);
     border-radius: 10px;
     padding: 30px;
@@ -147,12 +149,12 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.conteudo:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
+.conteudo-provas:hover {
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.conteudo h2 {
+.conteudo-provas h2 {
     display: flex;
     justify-content: center;
     color: var(--verde);
@@ -160,26 +162,26 @@ h1 {
     font-size: 2.8rem;
 }
 
-.conteudo p {
+.conteudo-provas p {
     line-height: 1.6;
     color: var(--preto);
     margin-bottom: 20px;
     font-size: 1.8rem;
 }
 
-.conteudo ul {
+.conteudo-provas ul {
     list-style-type: none;
     font-size: 1.8rem;
+    padding-left: 0; 
 }
 
-.conteudo ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--azul-claro);
-    transition: transform 0.5s ease;
-    color: var(--preto);
+.conteudo-provas ul li {
+    margin-bottom: 10px;
+    cursor: pointer; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.conteudo ul li:hover {
+.conteudo-provas ul li:hover {
     transform: translateX(10px);
     color: var(--verde);
 }
@@ -187,22 +189,18 @@ h1 {
 .home {
     display: flex;
     justify-content: flex-end;
+    margin-top: 30px; 
 }
 
 .home a {
     font-size: 2rem;
     color: var(--verde);
+    text-decoration: none; 
+    transition: color 0.3s ease;
 }
 
-.conteudo ul li .block {
-    display: none;
-}
-
-.conteudo ul li:hover .block {
-    display: block;
-    text-align: justify;
+.home a:hover {
     color: var(--marinho);
-    margin-bottom: 5px;
 }
 
 .opacidade {
@@ -210,23 +208,153 @@ h1 {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 1.5s ease, max-height 1.5s ease;
-    color: var(--marinho);
+    transition: opacity 0.5s ease, max-height 0.5s ease; 
     text-align: justify;
-    margin: 0;
-    padding: 0;
+    margin: 5px 0;
+    padding: 0 10px;
 }
 
-.conteudo ul li:hover .opacidade {
+.conteudo-provas ul li:hover .opacidade {
     opacity: 1;
-    max-height: 320px;
-    text-align: justify;
-    color: var(--marinho);
-    margin-bottom: 5px;
+    max-height: 500px; 
 }
 
 footer {
-    background-color: pink;
-    font-size: larger;
+    background-color: var(--marinho); 
+    font-size: 1.8rem; 
     text-align: center;
+    padding: 1.5rem;
+    color: var(--amarelo-claro);
+    margin-top: 50px;
+}
+
+
+.conteudo-relatorio {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    min-width: 280px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo-relatorio:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-relatorio h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--verde);
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.conteudo-relatorio p {
+    line-height: 1.6;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.conteudo-relatorio ul {
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding-left: 0;
+}
+
+.conteudo-relatorio ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.conteudo-relatorio ul li:hover {
+    transform: translateX(10px);
+    color: var(--verde);
+}
+
+.conteudo-relatorio ul li .opacidade {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    color: var(--marinho);
+    text-align: justify;
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.conteudo-relatorio ul li:hover .opacidade {
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+
+.conteudo-atividades {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    min-width: 280px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo-atividades:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-atividades h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--verde);
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.conteudo-atividades p {
+    line-height: 1.6;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.conteudo-atividades ul {
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding-left: 0;
+}
+
+.conteudo-atividades ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.conteudo-atividades ul li:hover {
+    transform: translateX(10px);
+    color: var(--verde);
+}
+
+.conteudo-atividades ul li .opacidade {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    color: var(--marinho);
+    text-align: justify;
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.conteudo-atividades ul li:hover .opacidade {
+    opacity: 1;
+    max-height: 500px;
 }
